@@ -23,6 +23,8 @@ First, install UV if you haven’t already:
 
 ```bash
 pip install uv
+```
+
 
 
 ## Installation
