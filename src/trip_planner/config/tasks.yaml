@@ -1,0 +1,97 @@
+research_task:
+  description: >
+    Conduct thorough research about the destination with a focus on {topic}.
+    Find relevant information about the location, attractions, activities, and hotels,
+    considering the current year is {current_year}.
+  expected_output: >
+    - Day 1:
+        - Activities: [Activity 1 for Day 1], [Activity 2 for Day 1]
+        - add link google maps direction from the hotel to the activity location
+        - Hotel Options:
+            - [Hotel 1](https://www.example.com/book-hotel1) - Price: Rs. 10000 per night
+            - [Hotel 2](https://www.example.com/book-hotel2) - Price: Rs.5000 per night
+            - Estimated costs for transportation and activities (if available) in rupees.
+        - Restaurants/Local Cuisine: [Local dish to try on Day 1]
+    - Day 2:
+        - Activities: [Activity 1 for Day 2], [Activity 2 for Day 2]
+        
+        - add link google maps direction from the hotel to the activity location
+        - Restaurants/Local Cuisine: [Local dish to try on Day 2]
+        - Estimated costs for transportation and activities (if available).
+    - Day 3:
+        - Activities: [Activity 1 for Day 3], [Activity 2 for Day 3]
+        - add link google maps direction from the hotel to the activity location
+        - Restaurants/Local Cuisine: [Local dish to try on Day 3]
+        - Estimated costs for transportation and activities (if available) in rupees.
+    - Total stay cost estimate: [Total cost for accommodation, activities, and food]
+    - Best Time to Visit: [Time of year or specific months]
+    - Weather Overview: [Brief description of weather conditions]
+    - Transportation Options: [Details on getting around the destination]
+    - Safety Tips: [Basic safety information or advice]
+    - Currency: [Currency used and exchange rate info]
+  agent: researcher
+
+reporting_task:
+  description: >
+    Review the research findings on {topic} and expand each topic into a full section for a trip plan report.
+    Ensure the report includes detailed information on attractions, activities, accommodations, and more.
+    Provide useful recommendations for booking hotels and things to consider for different budgets.
+  expected_output: >
+    ## Trip Plan for {topic}
+    ## Add a information about the distance between the orgin and destination
+    
+    ### 1. Day 1:
+        - Activities:
+            - [Activity 1 for Day 1]: Description of activity.
+            - [Activity 2 for Day 1]: Description of activity.
+            - add link google maps direction from the hotel to the activity location
+        - Hotels & Accommodations:
+            - Recommended Hotels with Booking Links:
+            - [Hotel 1](https://www.example.com/book-hotel1): Price: Rs.10000 per night, Description: [Hotel description].
+            - [Hotel 2](https://www.example.com/book-hotel2): Price: Rs. 15000 per night, Description: [Hotel description].
+        - Restaurants/Local Cuisine:
+            - [Dish 1 for Day 1]: Description of the dish.
+            - [Dish 2 for Day 1]: Description of the dish.
+        - Estimated Costs: [Breakdown of costs for transportation, activities and hotels].
+
+    ### 2. Day 2:
+        - Activities:
+            - [Activity 1 for Day 2]: Description of activity.
+            - [Activity 2 for Day 2]: Description of activity.
+            - add link google maps direction from the hotel to the activity location
+        - Hotels & Accommodations:
+        - Restaurants/Local Cuisine:
+            - [Dish 1 for Day 2]: Description of the dish.
+            - [Dish 2 for Day 2]: Description of the dish.
+        - Estimated Costs: [Breakdown of costs for transportation, activities and hotels].
+
+    ### 3. Day 3:
+        - Activities:
+            - [Activity 1 for Day 3]: Description of activity.
+            - [Activity 2 for Day 3]: Description of activity.
+            - add link google maps direction from the hotel to the activity location
+        - Hotels & Accommodations:
+        - Restaurants/Local Cuisine:
+            - [Dish 1 for Day 3]: Description of the dish.
+            - [Dish 2 for Day 3]: Description of the dish.
+        - Estimated Costs: [Breakdown of costs for transportation, activities and hotels].
+
+    ### 4. Total Stay Cost Estimate in Rupees:
+        - [Total estimated cost for accommodation, activities and food].
+
+    ### 5. Best Time to Visit:
+        - [Specific months or time period to visit the destination].
+
+    ### 6. Weather Overview:
+        - [General climate conditions for the destination].
+
+    ### 7. Transportation:
+        - [Mode of transportation available at the destination].
+        - [add links to booking sites for transportation services if available]
+
+    ### 8. Safety Tips:
+        - [Safety advice for travelers in the destination].
+
+    ### 9. Currency & Exchange:
+        - [Currency used and recommended exchange tips].
+  agent: reporting_analyst
